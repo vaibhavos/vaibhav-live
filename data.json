@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-23T11:58:53.994Z",
+  "updated": "2026-03-23T13:06:00.930Z",
   "total_earned": 40.37,
   "goal": 50000,
   "days_elapsed": 19,
@@ -18,7 +18,7 @@
     {
       "id": "ghost_protocol",
       "label": "Ghost Protocol",
-      "amount": 0,
+      "amount": 5700,
       "desc": "Quant × builder newsletter & community",
       "color": "#7244c4",
       "url": ""
@@ -34,7 +34,7 @@
     {
       "id": "quant_products",
       "label": "Quant products",
-      "amount": 0,
+      "amount": 3822,
       "desc": "Trading systems, tools & strategies",
       "color": "#b06d10",
       "url": ""
@@ -42,7 +42,7 @@
     {
       "id": "content",
       "label": "Content engine",
-      "amount": 15,
+      "amount": 540,
       "desc": "Multi-platform content distribution",
       "color": "#1a9968",
       "url": ""
