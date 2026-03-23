@@ -1,0 +1,71 @@
+{
+  "updated": "2026-03-23T00:00:00Z",
+  "total_earned": 40.37,
+  "goal": 50000,
+  "days_elapsed": 19,
+  "days_remaining": 142,
+  "challenge_start": "2026-03-05",
+  "challenge_end": "2026-08-12",
+  "streams": [
+    {
+      "id": "index_os",
+      "label": "Index OS",
+      "amount": 0,
+      "desc": "Execution OS for digital operators",
+      "color": "#378ADD",
+      "url": "https://index-os.vercel.app"
+    },
+    {
+      "id": "ghost_protocol",
+      "label": "Ghost Protocol",
+      "amount": 0,
+      "desc": "Quant × builder newsletter & community",
+      "color": "#7244c4",
+      "url": ""
+    },
+    {
+      "id": "opengoat",
+      "label": "OpenGOAT",
+      "amount": 0,
+      "desc": "Open source tools — GitHub stars → funding",
+      "color": "#2a8a5a",
+      "url": "https://github.com/vaibhavos"
+    },
+    {
+      "id": "quant_products",
+      "label": "Quant products",
+      "amount": 0,
+      "desc": "Trading systems, tools & strategies",
+      "color": "#b06d10",
+      "url": ""
+    },
+    {
+      "id": "content",
+      "label": "Content engine",
+      "amount": 0,
+      "desc": "Multi-platform content distribution",
+      "color": "#1a9968",
+      "url": ""
+    },
+    {
+      "id": "capital",
+      "label": "Capital",
+      "amount": 0,
+      "desc": "Systematic prop trading",
+      "color": "#c44040",
+      "url": ""
+    }
+  ],
+  "platforms": {
+    "tiktok":    { "label": "TikTok",    "count": 0, "color": "#1a9968" },
+    "instagram": { "label": "Instagram", "count": 0, "color": "#c44090" },
+    "twitter":   { "label": "X",         "count": 0, "color": "#378ADD" },
+    "threads":   { "label": "Threads",   "count": 0, "color": "#888780" },
+    "linkedin":  { "label": "LinkedIn",  "count": 0, "color": "#378ADD" },
+    "reddit":    { "label": "Reddit",    "count": 0, "color": "#b06d10" },
+    "youtube":   { "label": "YouTube",   "count": 0, "color": "#c44040" },
+    "github":    { "label": "GitHub",    "count": 0, "color": "#2a8a5a" }
+  },
+  "history": [],
+  "github_stars": 0
+}
