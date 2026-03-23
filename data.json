@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-23T00:00:00Z",
+  "updated": "2026-03-23T11:58:53.994Z",
   "total_earned": 40.37,
   "goal": 50000,
   "days_elapsed": 19,
@@ -42,7 +42,7 @@
     {
       "id": "content",
       "label": "Content engine",
-      "amount": 0,
+      "amount": 15,
       "desc": "Multi-platform content distribution",
       "color": "#1a9968",
       "url": ""
@@ -57,14 +57,46 @@
     }
   ],
   "platforms": {
-    "tiktok":    { "label": "TikTok",    "count": 0, "color": "#1a9968" },
-    "instagram": { "label": "Instagram", "count": 0, "color": "#c44090" },
-    "twitter":   { "label": "X",         "count": 0, "color": "#378ADD" },
-    "threads":   { "label": "Threads",   "count": 0, "color": "#888780" },
-    "linkedin":  { "label": "LinkedIn",  "count": 0, "color": "#378ADD" },
-    "reddit":    { "label": "Reddit",    "count": 0, "color": "#b06d10" },
-    "youtube":   { "label": "YouTube",   "count": 0, "color": "#c44040" },
-    "github":    { "label": "GitHub",    "count": 0, "color": "#2a8a5a" }
+    "tiktok": {
+      "label": "TikTok",
+      "color": "#1a9968",
+      "count": 0
+    },
+    "instagram": {
+      "label": "Instagram",
+      "color": "#c44090",
+      "count": 0
+    },
+    "twitter": {
+      "label": "X",
+      "color": "#378ADD",
+      "count": 0
+    },
+    "threads": {
+      "label": "Threads",
+      "color": "#888780",
+      "count": 0
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "color": "#378ADD",
+      "count": 0
+    },
+    "reddit": {
+      "label": "Reddit",
+      "color": "#b06d10",
+      "count": 0
+    },
+    "youtube": {
+      "label": "YouTube",
+      "color": "#c44040",
+      "count": 0
+    },
+    "github": {
+      "label": "GitHub",
+      "color": "#2a8a5a",
+      "count": 0
+    }
   },
   "history": [],
   "github_stars": 0

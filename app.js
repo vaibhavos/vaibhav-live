@@ -37,7 +37,8 @@ const ui = {
   followersBarFill: document.getElementById("followers-bar-fill"),
   goatStars: document.getElementById("goat-stars"),
   goatDesc: document.getElementById("goat-desc"),
-  footerUpdated: document.getElementById("footer-updated")
+  footerUpdated: document.getElementById("footer-updated"),
+  publicFeed: document.getElementById("public-feed")
 };
 
 ui.chartButtons.forEach((button) => {
@@ -193,7 +194,7 @@ function buildView(data) {
           label: stream.label || "Unnamed stream",
           amount: Math.max(numberOr(stream.amount, 0), 0),
           desc: stream.desc || "No description yet.",
-          color: sanitizeColor(stream.color, "#79b8ff"),
+          color: sanitizeColor(stream.color, "#00FF41"),
           url: stream.url || ""
         }))
         .sort((left, right) => right.amount - left.amount)
@@ -205,7 +206,7 @@ function buildView(data) {
   const platforms = Object.values(data.platforms || {}).map((platform) => ({
     label: platform.label || "Unknown",
     count: Math.max(numberOr(platform.count, 0), 0),
-    color: sanitizeColor(platform.color, "#7df9c6")
+    color: sanitizeColor(platform.color, "#00FF41")
   }));
 
   const totalFollowers = platforms.reduce((sum, platform) => sum + platform.count, 0);
@@ -247,10 +248,10 @@ function renderSummary(view) {
   setText(ui.progressPct, `${view.progress.toFixed(2)}%`);
   ui.progressFill.style.width = `${view.progress}%`;
   ui.progressFill.style.background = view.progress < 15
-    ? "linear-gradient(90deg, #ff8799, #ffd27f)"
+    ? "#c44040"
     : view.progress < 35
-      ? "linear-gradient(90deg, #ffd27f, #7df9c6)"
-      : "linear-gradient(90deg, #7df9c6, #79b8ff)";
+      ? "#b06d10"
+      : "#1a9968";
 
   setText(ui.runwayDays, `${view.daysLeft} days left`);
   setText(ui.statDay, String(view.daysElapsed));
@@ -457,6 +458,53 @@ function renderGoat(view) {
   setText(ui.goatDesc, "Pre-visibility. First repo launch will set the baseline.");
 }
 
+function renderFeed(history) {
+  if (!ui.publicFeed) return;
+  ui.publicFeed.textContent = "";
+
+  const logs = [...history].reverse().filter(l => l.note && l.note.trim() !== "");
+
+  if (logs.length === 0) {
+    ui.publicFeed.innerHTML = '<p class="mono text-dim" style="padding: 20px; text-align: center;">Awaiting log entries...</p>';
+    return;
+  }
+
+  logs.forEach(log => {
+    const card = document.createElement("article");
+    card.className = "insight-card";
+    card.style.borderBottom = "1px solid var(--line)";
+    card.style.padding = "20px";
+
+    const top = document.createElement("div");
+    top.className = "flex justify-between items-baseline mb-2";
+    top.style.display = "flex";
+    top.style.justifyContent = "space-between";
+    top.style.alignItems = "baseline";
+    top.style.marginBottom = "8px";
+
+    const day = document.createElement("span");
+    day.className = "eyebrow mono";
+    day.textContent = `Day ${log.day} — ${log.date}`;
+
+    const earned = document.createElement("span");
+    earned.className = "mono";
+    earned.style.color = "var(--accent)";
+    earned.textContent = log.earned > 0 ? `+$${log.earned.toFixed(2)}` : "";
+
+    top.append(day, earned);
+
+    const note = document.createElement("p");
+    note.className = "insight-card__copy";
+    note.style.fontFamily = "var(--font-mono)";
+    note.style.fontSize = "0.85rem";
+    note.style.color = "var(--text)";
+    note.textContent = log.note;
+
+    card.append(top, note);
+    ui.publicFeed.appendChild(card);
+  });
+}
+
 function renderChart(history) {
   if (chartInstance) {
     chartInstance.destroy();
@@ -488,9 +536,9 @@ function renderChart(history) {
   const ctx = ui.chartCanvas.getContext("2d");
   const gradient = ctx.createLinearGradient(0, 0, 0, 320);
 
-  gradient.addColorStop(0, "rgba(121, 184, 255, 0.22)");
-  gradient.addColorStop(0.55, "rgba(125, 249, 198, 0.12)");
-  gradient.addColorStop(1, "rgba(121, 184, 255, 0.01)");
+  gradient.addColorStop(0, "rgba(0, 255, 65, 0.2)");
+  gradient.addColorStop(0.5, "rgba(0, 255, 65, 0.05)");
+  gradient.addColorStop(1, "rgba(0, 255, 65, 0)");
 
   chartInstance = new Chart(ctx, {
     type: "line",
@@ -500,14 +548,14 @@ function renderChart(history) {
         {
           label: isDaily ? "Daily earnings" : "Cumulative earnings",
           data: isDaily ? dailyData : cumulativeData,
-          borderColor: isDaily ? "#7df9c6" : "#79b8ff",
+          borderColor: "#00FF41",
           backgroundColor: gradient,
-          borderWidth: 2,
+          borderWidth: 1.5,
           fill: true,
-          tension: 0.35,
+          tension: 0,
           pointRadius: 0,
           pointHoverRadius: 4,
-          pointHoverBackgroundColor: "#eef3ff"
+          pointHoverBackgroundColor: "#00FF41"
         }
       ]
     },
@@ -519,18 +567,18 @@ function renderChart(history) {
           display: false
         },
         tooltip: {
-          backgroundColor: "#07101f",
-          borderColor: "rgba(121, 184, 255, 0.28)",
+          backgroundColor: "#000000",
+          borderColor: "#3b4b37",
           borderWidth: 1,
-          titleColor: "#eef3ff",
-          bodyColor: "#a4b3d3",
+          titleColor: "#d4d9d2",
+          bodyColor: "#00FF41",
           displayColors: false,
           titleFont: {
-            family: "IBM Plex Mono",
+            family: "JetBrains Mono",
             size: 11
           },
           bodyFont: {
-            family: "IBM Plex Mono",
+            family: "JetBrains Mono",
             size: 12
           },
           callbacks: {
@@ -543,9 +591,9 @@ function renderChart(history) {
       scales: {
         x: {
           ticks: {
-            color: "#70809f",
+            color: "#6b726a",
             font: {
-              family: "IBM Plex Mono",
+              family: "JetBrains Mono",
               size: 10
             },
             maxTicksLimit: 8
@@ -559,9 +607,9 @@ function renderChart(history) {
         },
         y: {
           ticks: {
-            color: "#70809f",
+            color: "#6b726a",
             font: {
-              family: "IBM Plex Mono",
+              family: "JetBrains Mono",
               size: 10
             },
             callback(value) {
@@ -569,7 +617,7 @@ function renderChart(history) {
             }
           },
           grid: {
-            color: "rgba(135, 166, 214, 0.12)"
+            color: "#1c231a"
           },
           border: {
             display: false
@@ -607,6 +655,7 @@ async function loadData() {
     renderStreams(view);
     renderPlatforms(view);
     renderGoat(view);
+    renderFeed(view.history);
     renderChart(view.history);
   } catch (error) {
     console.error("Failed to load data.json", error);

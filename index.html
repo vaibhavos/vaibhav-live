@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#08101f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script defer src="./app.js"></script>
@@ -34,6 +34,8 @@
     </div>
 
     <nav class="topnav" aria-label="Primary">
+      <a href="https://github.com/vaibhavos" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      <a href="https://youtube.com/@vaibhav_os" target="_blank" rel="noopener noreferrer" class="nav-link">YouTube</a>
       <a href="https://twitter.com/vaibhav_os" target="_blank" rel="noopener noreferrer" class="nav-link">X / @vaibhav_os</a>
       <a href="https://index-os.vercel.app" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--primary">Index OS</a>
     </nav>
@@ -127,6 +129,20 @@
       </div>
 
       <div class="streams-grid" id="streams-grid"></div>
+    </section>
+
+    <section class="section">
+      <section class="panel">
+        <div class="section-head section-head--compact">
+          <div>
+            <p class="eyebrow mono">captain's log</p>
+            <h2>Public operating feed.</h2>
+          </div>
+        </div>
+        <div class="insight-stack" id="public-feed" style="max-height: 400px; overflow-y: auto;">
+          <p class="mono text-dim" style="padding: 20px; text-align: center;">Awaiting log entries...</p>
+        </div>
+      </section>
     </section>
 
     <section class="section section-grid">
@@ -224,6 +240,40 @@
       </section>
     </section>
 
+    <section class="section">
+      <section class="panel">
+        <div class="section-head section-head--compact">
+          <div>
+            <p class="eyebrow mono">sprint roadmap</p>
+            <h2>Milestones.</h2>
+          </div>
+        </div>
+
+        <ul class="manifesto-list">
+          <li>
+            <strong>Today → April</strong>
+            <span>Establish baseline revenue, lock in the daily publishing habit, and bootstrap the first OpenGOAT repo.</span>
+          </li>
+          <li>
+            <strong>April → June</strong>
+            <span>Scale the content engine, multiply active distribution channels, and launch the primary quant products.</span>
+          </li>
+          <li>
+            <strong>June → July</strong>
+            <span>Optimize conversion rates, aggressively grow the Ghost Protocol community, and double down on winning streams.</span>
+          </li>
+          <li>
+            <strong>July → August</strong>
+            <span>Consolidate audience attention, maximize leverage from the open-source flywheel, and aim for breakout revenue months.</span>
+          </li>
+          <li>
+            <strong>Final run → 12th Aug</strong>
+            <span>The final sprint. Push all systems to their absolute limits to cross the finish line.</span>
+          </li>
+        </ul>
+      </section>
+    </section>
+
     <section class="section section-grid">
       <section class="panel">
         <div class="section-head section-head--compact">
@@ -243,6 +293,11 @@
           <span class="tag mono">digital marketing</span>
           <span class="tag mono">quant systems</span>
           <span class="tag mono">build in public</span>
+        </div>
+        <div class="tag-row" style="margin-top: 16px;">
+          <a href="https://twitter.com/vaibhav_os" target="_blank" class="cta-link"><span class="tag mono" style="color: var(--accent);">X (Twitter) ↗</span></a>
+          <a href="https://github.com/vaibhavos" target="_blank" class="cta-link"><span class="tag mono" style="color: var(--accent);">GitHub ↗</span></a>
+          <a href="https://linkedin.com/in/vaibhav" target="_blank" class="cta-link"><span class="tag mono" style="color: var(--accent);">LinkedIn ↗</span></a>
         </div>
       </section>
 
