@@ -2,7 +2,7 @@
 
 Public earnings dashboard for the $50K challenge.
 
-**Live at:** `https://YOUR_GITHUB_USERNAME.github.io/vaibhav-live`
+**Live at:** `https://vaibhavos.github.io/vaibhav-live`
 
 ## How it works
 
