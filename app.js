@@ -477,7 +477,7 @@ function renderChart(history) {
   ui.chartEmpty.classList.add("hidden");
   setText(ui.chartWindow, `Last ${history.length} updates`);
 
-  const labels = history.map((point) => `D${point.day || "?"}`);
+  const labels = history.map((point) => `D${point.day ?? "?"}`);
   let cumulative = 0;
   const cumulativeData = history.map((point) => {
     cumulative += point.earned;
