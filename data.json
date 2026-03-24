@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-  "updated": "2026-03-24T02:26:29.096Z",
-  "total_earned": 100,
-=======
-  "updated": "2026-03-24T02:22:53.022Z",
+  "updated": "2026-03-24T02:29:16.760Z",
   "total_earned": 44,
->>>>>>> e90435cafafb1a60e5a4336a2d60db2f38c7b087
   "goal": 50000,
   "days_elapsed": 20,
   "days_remaining": 141,
@@ -47,7 +42,7 @@
     {
       "id": "content",
       "label": "Content engine",
-      "amount": 180,
+      "amount": 540,
       "desc": "Multi-platform content distribution",
       "color": "#1a9968",
       "url": ""
@@ -65,20 +60,12 @@
     "tiktok": {
       "label": "TikTok",
       "color": "#1a9968",
-<<<<<<< HEAD
-      "count": 200
-=======
       "count": 153
->>>>>>> e90435cafafb1a60e5a4336a2d60db2f38c7b087
     },
     "instagram": {
       "label": "Instagram",
       "color": "#c44090",
-<<<<<<< HEAD
-      "count": 3000
-=======
       "count": 3536
->>>>>>> e90435cafafb1a60e5a4336a2d60db2f38c7b087
     },
     "twitter": {
       "label": "X",
@@ -93,11 +80,7 @@
     "linkedin": {
       "label": "LinkedIn",
       "color": "#378ADD",
-<<<<<<< HEAD
-      "count": 1500
-=======
       "count": 1505
->>>>>>> e90435cafafb1a60e5a4336a2d60db2f38c7b087
     },
     "reddit": {
       "label": "Reddit",
@@ -119,17 +102,10 @@
     {
       "date": "2026-03-24",
       "day": 20,
-<<<<<<< HEAD
-      "earned": 100,
-      "posts": 5,
-      "level": 0,
-      "note": "Test sync fix"
-=======
       "earned": 44,
       "posts": 28,
       "level": 0,
       "note": "All what i earned till now"
->>>>>>> e90435cafafb1a60e5a4336a2d60db2f38c7b087
     }
   ],
   "github_stars": 0
