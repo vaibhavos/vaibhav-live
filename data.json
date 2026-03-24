@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-  "updated": "2026-03-23T13:06:00.930Z",
-=======
-  "updated": "2026-03-23T13:32:41.327Z",
->>>>>>> 491ac6b56b5113fc37eeb9df0ab68f0233ac4729
+  "updated": "2026-03-24T01:22:52.222Z",
   "total_earned": 40.37,
   "goal": 50000,
-  "days_elapsed": 19,
-  "days_remaining": 142,
+  "days_elapsed": 20,
+  "days_remaining": 141,
   "challenge_start": "2026-03-05",
   "challenge_end": "2026-08-12",
   "streams": [
@@ -22,7 +18,7 @@
     {
       "id": "ghost_protocol",
       "label": "Ghost Protocol",
-      "amount": 5700,
+      "amount": 0,
       "desc": "Quant × builder newsletter & community",
       "color": "#7244c4",
       "url": ""
@@ -38,7 +34,7 @@
     {
       "id": "quant_products",
       "label": "Quant products",
-      "amount": 3822,
+      "amount": 0,
       "desc": "Trading systems, tools & strategies",
       "color": "#b06d10",
       "url": ""
