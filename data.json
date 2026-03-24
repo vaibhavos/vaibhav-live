@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-24T02:07:02.158Z",
+  "updated": "2026-03-24T02:22:53.022Z",
   "total_earned": 44,
   "goal": 50000,
   "days_elapsed": 20,
@@ -60,27 +60,27 @@
     "tiktok": {
       "label": "TikTok",
       "color": "#1a9968",
-      "count": 0
+      "count": 153
     },
     "instagram": {
       "label": "Instagram",
       "color": "#c44090",
-      "count": 0
+      "count": 3536
     },
     "twitter": {
       "label": "X",
       "color": "#378ADD",
-      "count": 0
+      "count": 15
     },
     "threads": {
       "label": "Threads",
       "color": "#888780",
-      "count": 0
+      "count": 9
     },
     "linkedin": {
       "label": "LinkedIn",
       "color": "#378ADD",
-      "count": 0
+      "count": 1505
     },
     "reddit": {
       "label": "Reddit",
@@ -90,7 +90,7 @@
     "youtube": {
       "label": "YouTube",
       "color": "#c44040",
-      "count": 0
+      "count": 18
     },
     "github": {
       "label": "GitHub",
