@@ -1,10 +1,6 @@
 {
-<<<<<<< HEAD
-  "updated": "2026-03-24T01:56:02.611Z",
-=======
-  "updated": "2026-03-24T01:56:04.811Z",
->>>>>>> 86ad342f0ea3cf75cb0fe1df317485c96ed05d5a
-  "total_earned": 44,
+  "updated": "2026-03-24T02:26:29.096Z",
+  "total_earned": 100,
   "goal": 50000,
   "days_elapsed": 20,
   "days_remaining": 141,
@@ -46,7 +42,7 @@
     {
       "id": "content",
       "label": "Content engine",
-      "amount": 540,
+      "amount": 180,
       "desc": "Multi-platform content distribution",
       "color": "#1a9968",
       "url": ""
@@ -64,27 +60,27 @@
     "tiktok": {
       "label": "TikTok",
       "color": "#1a9968",
-      "count": 0
+      "count": 200
     },
     "instagram": {
       "label": "Instagram",
       "color": "#c44090",
-      "count": 0
+      "count": 3000
     },
     "twitter": {
       "label": "X",
       "color": "#378ADD",
-      "count": 0
+      "count": 15
     },
     "threads": {
       "label": "Threads",
       "color": "#888780",
-      "count": 0
+      "count": 9
     },
     "linkedin": {
       "label": "LinkedIn",
       "color": "#378ADD",
-      "count": 0
+      "count": 1500
     },
     "reddit": {
       "label": "Reddit",
@@ -94,7 +90,7 @@
     "youtube": {
       "label": "YouTube",
       "color": "#c44040",
-      "count": 0
+      "count": 18
     },
     "github": {
       "label": "GitHub",
@@ -106,10 +102,10 @@
     {
       "date": "2026-03-24",
       "day": 20,
-      "earned": 44,
-      "posts": 28,
-      "level": 3,
-      "note": ""
+      "earned": 100,
+      "posts": 5,
+      "level": 0,
+      "note": "Test sync fix"
     }
   ],
   "github_stars": 0
