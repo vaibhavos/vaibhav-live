@@ -189,15 +189,16 @@ function buildView(data) {
 
   const streams = Array.isArray(data.streams)
     ? data.streams
-        .map((stream) => ({
-          id: stream.id || "",
-          label: stream.label || "Unnamed stream",
-          amount: Math.max(numberOr(stream.amount, 0), 0),
-          desc: stream.desc || "No description yet.",
-          color: sanitizeColor(stream.color, "#00FF41"),
-          url: stream.url || ""
-        }))
-        .sort((left, right) => right.amount - left.amount)
+      .map((stream) => ({
+        id: stream.id || "",
+        label: stream.label || "Unnamed stream",
+        amount: Math.max(numberOr(stream.amount, 0), 0),
+        desc: stream.desc || "No description yet.",
+        color: sanitizeColor(stream.color, "#00FF41"),
+        url: stream.url || "",
+        image: stream.image || ""
+      }))
+      .sort((left, right) => right.amount - left.amount)
     : [];
 
   const totalStreamAmount = streams.reduce((sum, stream) => sum + stream.amount, 0);
@@ -213,11 +214,11 @@ function buildView(data) {
 
   const history = Array.isArray(data.history)
     ? data.history.slice(-HISTORY_LIMIT).map((point) => ({
-        day: Math.max(numberOr(point.day, 0), 0),
-        earned: Math.max(numberOr(point.earned, 0), 0),
-        date: point.date || "Unknown",
-        note: point.note || ""
-      }))
+      day: Math.max(numberOr(point.day, 0), 0),
+      earned: Math.max(numberOr(point.earned, 0), 0),
+      date: point.date || "Unknown",
+      note: point.note || ""
+    }))
     : [];
 
   return {
@@ -341,6 +342,18 @@ function renderStreams(view) {
     card.className = "stream-card";
     card.style.setProperty("--stream-color", stream.color);
 
+    if (stream.image) {
+      const img = document.createElement("img");
+      img.className = "stream-card__image";
+      img.src = stream.image;
+      img.alt = stream.label;
+      img.loading = "lazy";
+      card.appendChild(img);
+    }
+
+    const content = document.createElement("div");
+    content.className = "stream-card__content";
+
     const top = document.createElement("div");
     top.className = "stream-card__top";
 
@@ -350,12 +363,12 @@ function renderStreams(view) {
     amount.textContent = stream.amount > 0 ? `${fmtCurrency(stream.amount, 0)} / mo` : "pre-revenue";
 
     top.append(titleWrap, amount);
-    card.appendChild(top);
+    content.appendChild(top);
 
     const copy = document.createElement("p");
     copy.className = "stream-card__copy";
     copy.textContent = stream.desc;
-    card.appendChild(copy);
+    content.appendChild(copy);
 
     const meter = document.createElement("div");
     meter.className = "stream-meter";
@@ -366,7 +379,7 @@ function renderStreams(view) {
     meterFill.style.width = `${share}%`;
 
     meter.appendChild(meterFill);
-    card.appendChild(meter);
+    content.appendChild(meter);
 
     const footer = document.createElement("div");
     footer.className = "stream-card__footer";
@@ -389,7 +402,9 @@ function renderStreams(view) {
       footer.appendChild(link);
     }
 
-    card.appendChild(footer);
+    content.appendChild(footer);
+
+    card.appendChild(content);
     ui.streamsGrid.appendChild(card);
   });
 }
@@ -572,7 +587,7 @@ function renderChart(history) {
           backgroundColor: "#000000",
           borderColor: "#3b4b37",
           borderWidth: 1,
-          titleColor: "#d4d9d2",
+          titleColor: "#ececebff",
           bodyColor: "#00FF41",
           displayColors: false,
           titleFont: {
