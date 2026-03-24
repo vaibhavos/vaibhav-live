@@ -214,7 +214,9 @@ function buildView(data) {
   const history = Array.isArray(data.history)
     ? data.history.slice(-HISTORY_LIMIT).map((point) => ({
         day: Math.max(numberOr(point.day, 0), 0),
-        earned: Math.max(numberOr(point.earned, 0), 0)
+        earned: Math.max(numberOr(point.earned, 0), 0),
+        date: point.date || "Unknown",
+        note: point.note || ""
       }))
     : [];
 
