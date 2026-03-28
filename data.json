@@ -1,9 +1,9 @@
 {
-  "updated": "2026-03-24T05:33:18.033Z",
-  "total_earned": 44,
+  "updated": "2026-03-28T06:05:17.440Z",
+  "total_earned": 100,
   "goal": 50000,
-  "days_elapsed": 20,
-  "days_remaining": 141,
+  "days_elapsed": 24,
+  "days_remaining": 137,
   "challenge_start": "2026-03-05",
   "challenge_end": "2026-08-12",
   "streams": [
@@ -13,8 +13,7 @@
       "amount": 0,
       "desc": "Execution OS for digital operators",
       "color": "#378ADD",
-      "url": "https://index-os.vercel.app",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
+      "url": "https://index-os.vercel.app"
     },
     {
       "id": "ghost_protocol",
@@ -22,8 +21,7 @@
       "amount": 0,
       "desc": "Quant × builder newsletter & community",
       "color": "#7244c4",
-      "url": "",
-      "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=400"
+      "url": ""
     },
     {
       "id": "opengoat",
@@ -31,8 +29,7 @@
       "amount": 0,
       "desc": "Open source tools — GitHub stars → funding",
       "color": "#2a8a5a",
-      "url": "https://github.com/vaibhavos",
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400"
+      "url": "https://github.com/vaibhavos"
     },
     {
       "id": "quant_products",
@@ -40,17 +37,15 @@
       "amount": 0,
       "desc": "Trading systems, tools & strategies",
       "color": "#b06d10",
-      "url": "",
-      "image": "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "url": ""
     },
     {
       "id": "content",
       "label": "Content engine",
-      "amount": 540,
+      "amount": 720,
       "desc": "Multi-platform content distribution",
       "color": "#1a9968",
-      "url": "",
-      "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=400"
+      "url": ""
     },
     {
       "id": "capital",
@@ -58,35 +53,34 @@
       "amount": 0,
       "desc": "Systematic prop trading",
       "color": "#c44040",
-      "url": "",
-      "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=400"
+      "url": ""
     }
   ],
   "platforms": {
     "tiktok": {
       "label": "TikTok",
       "color": "#1a9968",
-      "count": 153
+      "count": 180
     },
     "instagram": {
       "label": "Instagram",
       "color": "#c44090",
-      "count": 3536
+      "count": 3535
     },
     "twitter": {
       "label": "X",
       "color": "#378ADD",
-      "count": 15
+      "count": 23
     },
     "threads": {
       "label": "Threads",
       "color": "#888780",
-      "count": 9
+      "count": 10
     },
     "linkedin": {
       "label": "LinkedIn",
       "color": "#378ADD",
-      "count": 1505
+      "count": 1503
     },
     "reddit": {
       "label": "Reddit",
@@ -106,12 +100,12 @@
   },
   "history": [
     {
-      "date": "2026-03-24",
-      "day": 20,
-      "earned": 44,
-      "posts": 28,
-      "level": 0,
-      "note": "All what i earned till now"
+      "date": "2026-03-28",
+      "day": 24,
+      "earned": 100,
+      "posts": 42,
+      "level": 3,
+      "note": ""
     }
   ],
   "github_stars": 0
